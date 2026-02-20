@@ -4,7 +4,8 @@ export default defineConfig({
   video: false,
   e2e: {
     'baseUrl': 'http://localhost:4200',
-    'experimentalRunAllSpecs': true
+    'experimentalRunAllSpecs': true,
+    tsConfig: 'tsconfig.cypress.json'
   },
   reporter: 'mochawesome',
   reporterOptions: {
@@ -19,7 +20,8 @@ export default defineConfig({
       framework: 'angular',
       bundler: 'webpack',
     },
-    specPattern: '**/*.cy.ts'
+    specPattern: '**/*.cy.ts',
+    tsConfig: 'tsconfig.cypress.json'
   }
   
 })
